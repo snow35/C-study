@@ -1,19 +1,8 @@
 #include<iostream>
 int main(void){
-    int *arr;
-    int leng;
+    int x = 10;
+    std::cout<<x<<std::endl;
+    std::cout<<*&x<<std::endl;
 
-    std::cout<<"배열의 크기를 입력하세요 : "; //배열 크기 입력받기
-    std::cin>>leng;
-
-    arr = new int[leng];
-
-    for(int i = 0; i < leng; i++){
-        arr[i] = leng - 1;
-    }
-    for (int i = 0; i<leng; i++){
-        std::cout<<arr[i]<<std::endl;
-    }
-
-    delete[] arr; //arr배열 삭제 
+    return 0;
 }
