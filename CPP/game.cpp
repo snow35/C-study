@@ -1,5 +1,4 @@
 #include<iostream>
-
 typedef struct Animal
     {
         char name[30];
@@ -50,13 +49,14 @@ int main() {
         std::cout<<"3. 상태 보기"<<std::endl;
 
         int input;
+        int play_with = 0;
         std::cin>>input;
 
         switch (input) {
-            int play_with;
+            
             case 1:
                 list[animal_num] = new Animal;
-                create_animal(list[play_with]);
+                create_animal(list[animal_num]);
 
                 animal_num++;
                 break;
