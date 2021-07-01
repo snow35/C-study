@@ -4,10 +4,10 @@ using namespace std;
 
 int main() {
   // Create and open a text file
-  ofstream MyFile("FURRY BOOK.txt");
+  ofstream MyFile("Coyang test score.txt");
 
   // Write to the file
-  MyFile << "Files can be tricky, but it is fun enough!";
+  MyFile << "all 100";
 
   // Close the file
   MyFile.close();
