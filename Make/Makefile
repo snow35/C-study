@@ -1,11 +1,15 @@
-hi.o : hi.h hi.cc
-	g++ -c hi.cc
+CC = g++
+CXXFLAGS = -Wall -O2
+OBJS = hi.o hello.o main.o
 
-hello.o : hello.h hello.cc
-	g++ -c hello.cc
+%.o : %.cc 
+	$(CC) $(CXXFLAGS) -c $<
 
-main.o : main.cc hi.h hello.h
-	g++ -c main.cc
+main : $(OBJS)
+	$(CC) $(CXXFLAGS) $(OBJS) -o main
 
-main : hi.o hello.o main.o
-	g++ hi.o main.o -o main
+.PHONY: clean
+clean:
+	rm -f $(OBJS) main
+
+-include %(OBJS:.o=.d)
